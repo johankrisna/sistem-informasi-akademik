@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2025 at 01:54 PM
+-- Generation Time: Nov 07, 2025 at 08:06 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `nama`, `created_at`) VALUES
-(1, 'admin', 'password', 'Administrator', '2025-10-05 13:07:21');
+(1, 'admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Administrator', '2025-10-07 11:55:37');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,10 @@ INSERT INTO `jadwal_kuliah` (`id`, `mata_kuliah_id`, `hari`, `jam_mulai`, `jam_s
 (3, 3, 'Rabu', '13:00:00', '15:30:00', 'R.103'),
 (4, 4, 'Kamis', '09:00:00', '11:30:00', 'R.201'),
 (5, 5, 'Jumat', '13:00:00', '15:30:00', 'Lab. Komputer'),
-(6, 6, 'Sabtu', '08:00:00', '10:30:00', 'R.105');
+(6, 6, 'Sabtu', '08:00:00', '10:30:00', 'R.105'),
+(7, 7, 'Senin', '14:00:00', '16:30:00', 'R.104'),
+(8, 8, 'Selasa', '08:00:00', '10:30:00', 'R.202'),
+(9, 9, 'Rabu', '10:00:00', '12:30:00', 'Lab. Programming');
 
 -- --------------------------------------------------------
 
@@ -92,13 +95,22 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `npm`, `password`, `nama`, `jurusan`, `angkatan`, `email`, `no_hp`, `created_at`) VALUES
-(1, '202101001', 'password', 'Budi Santoso', 'Teknik Informatika', 2021, 'budi@email.com', '081234567890', '2025-10-05 13:07:21'),
-(2, '202101002', 'password', 'Siti Rahayu', 'Sistem Informasi', 2021, 'siti@email.com', '081234567891', '2025-10-05 13:07:21'),
-(3, '202102001', 'password', 'Ahmad Wijaya', 'Teknik Informatika', 2022, 'ahmad@email.com', '081234567892', '2025-10-07 10:59:18'),
-(4, '202103001', 'password', 'Dewi Lestari', 'Sistem Informasi', 2023, 'dewi@email.com', '081234567893', '2025-10-07 10:59:18'),
-(5, '202101003', 'password', 'Rina Melati', 'Teknik Informatika', 2021, 'rina@email.com', '081234567894', '2025-10-07 11:09:40'),
-(6, '202102002', 'password', 'Fajar Setiawan', 'Sistem Informasi', 2022, 'fajar@email.com', '081234567895', '2025-10-07 11:09:40'),
-(7, '202103002', 'password', 'Maya Sari', 'Teknik Informatika', 2023, 'maya@email.com', '081234567896', '2025-10-07 11:09:40');
+(1, '202101001', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Budi Santoso', 'Teknik Informatika', 2021, 'budi@email.com', '081234567890', '2025-10-07 11:55:37'),
+(2, '202101002', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Siti Rahayu', 'Sistem Informasi', 2021, 'siti@email.com', '081234567891', '2025-10-07 11:55:37'),
+(3, '202101003', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Ahmad Wijaya', 'Teknik Informatika', 2021, 'ahmad@email.com', '081234567892', '2025-10-07 11:55:37'),
+(4, '202101004', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Dewi Lestari', 'Sistem Informasi', 2021, 'dewi@email.com', '081234567893', '2025-10-07 11:55:37'),
+(5, '202101005', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Rina Melati', 'Teknik Informatika', 2021, 'rina@email.com', '081234567894', '2025-10-07 11:55:37'),
+(6, '202102001', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Fajar Setiawan', 'Teknik Komputer', 2022, 'fajar@email.com', '081234567895', '2025-10-07 11:55:37'),
+(7, '202102002', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Maya Sari', 'Manajemen Informatika', 2022, 'maya@email.com', '081234567896', '2025-10-07 11:55:37'),
+(8, '202102003', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Hendra Pratama', 'Teknik Informatika', 2022, 'hendra@email.com', '081234567897', '2025-10-07 11:55:37'),
+(9, '202102004', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Linda Kusuma', 'Sistem Informasi', 2022, 'linda@email.com', '081234567898', '2025-10-07 11:55:37'),
+(10, '202103001', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Rizki Ramadhan', 'Teknik Komputer', 2023, 'rizki@email.com', '081234567899', '2025-10-07 11:55:37'),
+(11, '202103002', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Sari Indah', 'Manajemen Informatika', 2023, 'sari@email.com', '081234567900', '2025-10-07 11:55:37'),
+(12, '202103003', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Dimas Prayoga', 'Teknik Informatika', 2023, 'dimas@email.com', '081234567901', '2025-10-07 11:55:37'),
+(13, '202103004', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Nina Marlina', 'Sistem Informasi', 2023, 'nina@email.com', '081234567902', '2025-10-07 11:55:37'),
+(14, '202103005', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Eko Prasetyo', 'Teknik Informatika', 2023, 'eko@email.com', '081234567903', '2025-10-07 11:55:37'),
+(15, '202103006', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Fitri Anggraini', 'Manajemen Informatika', 2023, 'fitri@email.com', '081234567904', '2025-10-07 11:55:37'),
+(17, '215314215', '$2y$10$Sj7RWGIAG8Y3w7HoyIkOG.AxLRzE2Grs1UaJexcFGT/t7GmIhjkrG', 'Johannes Krisnawan', 'Teknik Informatika', 2021, 'johan@email.com', '08813749677', '2025-10-07 12:14:27');
 
 -- --------------------------------------------------------
 
@@ -121,8 +133,8 @@ CREATE TABLE `mata_kuliah` (
 
 INSERT INTO `mata_kuliah` (`id`, `kode_mk`, `nama_mk`, `sks`, `semester`, `dosen_pengampu`) VALUES
 (1, 'MK001', 'Pemrograman Web', 3, 3, 'Dr. Ahmad, M.Kom'),
-(2, 'MK002', 'Basis Data', 3, 2, 'Dr. Sari, M.T.'),
-(3, 'MK003', 'Algoritma dan Pemrograman', 4, 1, 'Prof. Joko, M.Sc.'),
+(2, 'MK002', 'Basis Data', 3, 2, 'Dr. Stefany Puspita Sari, M.T.'),
+(3, 'MK003', 'Algoritma dan Pemrograman', 4, 1, 'Prof. Joko Widodo, M.Sc.'),
 (4, 'MK004', 'Jaringan Komputer', 3, 4, 'Dr. Rudi, M.T.'),
 (5, 'MK005', 'Pemrograman Mobile', 3, 5, 'Dr. Maya, M.Kom.'),
 (6, 'MK006', 'Kecerdasan Buatan', 3, 6, 'Prof. Hendra, M.Sc.'),
@@ -151,11 +163,46 @@ CREATE TABLE `nilai` (
 --
 
 INSERT INTO `nilai` (`id`, `mahasiswa_id`, `mata_kuliah_id`, `nilai_huruf`, `nilai_angka`, `semester`, `tahun_akademik`) VALUES
-(1, 1, 1, 'A', '85.50', 3, '2023/2024'),
-(2, 1, 2, 'B', '78.00', 2, '2022/2023'),
-(3, 2, 1, 'A', '90.00', 3, '2023/2024'),
-(4, 2, 3, 'B', '82.50', 1, '2021/2022'),
-(5, 1, 2, 'A', '89.00', 5, '2023');
+(1, 1, 3, 'A', '85.50', 1, '2021/2022'),
+(2, 2, 3, 'B', '78.00', 1, '2021/2022'),
+(3, 3, 3, 'A', '90.00', 1, '2021/2022'),
+(4, 4, 3, 'B', '82.50', 1, '2021/2022'),
+(5, 5, 3, 'C', '72.00', 1, '2021/2022'),
+(6, 1, 2, 'B', '80.00', 2, '2021/2022'),
+(7, 1, 8, 'A', '88.00', 2, '2021/2022'),
+(8, 2, 2, 'A', '92.00', 2, '2021/2022'),
+(9, 3, 2, 'B', '79.50', 2, '2021/2022'),
+(10, 4, 8, 'C', '71.00', 2, '2021/2022'),
+(11, 1, 1, 'A', '87.00', 3, '2022/2023'),
+(12, 1, 7, 'B', '83.50', 3, '2022/2023'),
+(13, 1, 9, 'A', '91.00', 3, '2022/2023'),
+(14, 2, 1, 'A', '89.00', 3, '2022/2023'),
+(15, 3, 1, 'B', '81.00', 3, '2022/2023'),
+(16, 4, 7, 'A', '86.50', 3, '2022/2023'),
+(17, 5, 1, 'C', '69.00', 3, '2022/2023'),
+(18, 6, 3, 'B', '84.00', 1, '2022/2023'),
+(19, 7, 3, 'A', '93.00', 1, '2022/2023'),
+(20, 8, 3, 'B', '77.50', 1, '2022/2023'),
+(21, 9, 3, 'A', '88.00', 1, '2022/2023'),
+(22, 10, 3, 'B', '79.00', 1, '2023/2024'),
+(23, 11, 3, 'A', '94.00', 1, '2023/2024'),
+(24, 12, 3, 'C', '68.50', 1, '2023/2024'),
+(25, 13, 3, 'B', '82.00', 1, '2023/2024'),
+(26, 2, 7, 'A', '90.50', 3, '2022/2023'),
+(27, 3, 9, 'B', '80.00', 3, '2022/2023'),
+(28, 6, 2, 'A', '87.50', 2, '2022/2023'),
+(29, 7, 8, 'B', '83.00', 2, '2022/2023'),
+(30, 8, 1, 'C', '70.50', 3, '2023/2024'),
+(31, 9, 7, 'A', '89.00', 3, '2023/2024'),
+(35, 17, 2, 'A', '88.00', 3, '2025/2026'),
+(36, 17, 3, 'A', '90.00', 1, '2025/2026'),
+(37, 17, 4, 'B', '84.00', 2, '2025/2026'),
+(38, 17, 6, 'A', '88.00', 3, '2025/2026'),
+(39, 17, 9, 'B', '78.00', 4, '2025/2026'),
+(40, 17, 5, 'B', '80.00', 5, '2025/2026'),
+(41, 17, 1, 'A', '86.00', 6, '2025/2026'),
+(42, 17, 7, 'B', '77.00', 7, '2025/2026'),
+(43, 17, 8, 'C', '74.00', 8, '2025/2026');
 
 --
 -- Indexes for dumped tables
@@ -211,25 +258,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `jadwal_kuliah`
 --
 ALTER TABLE `jadwal_kuliah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `mata_kuliah`
 --
 ALTER TABLE `mata_kuliah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- Constraints for dumped tables
